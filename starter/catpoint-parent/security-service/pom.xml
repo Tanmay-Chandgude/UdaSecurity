@@ -15,55 +15,51 @@
 
     <dependencies>
 
+        <!-- TESTING -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.10.2</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>5.11.0</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-junit-jupiter</artifactId>
-            <version>5.11.0</version>
             <scope>test</scope>
         </dependency>
 
+        <!-- INTERNAL MODULE -->
         <dependency>
             <groupId>com.udacity.catpoint</groupId>
             <artifactId>image-service</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
 
+        <!-- UI -->
         <dependency>
             <groupId>com.miglayout</groupId>
             <artifactId>miglayout-swing</artifactId>
             <version>11.0</version>
         </dependency>
 
+        <!-- UTILITIES -->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>33.2.1-jre</version>
         </dependency>
 
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.10.1</version>
         </dependency>
+
     </dependencies>
 
     <build>
+
         <plugins>
 
+            <!-- Executable JAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -79,21 +75,19 @@
 
                         <configuration>
                             <transformers>
-
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>
-                                        com.udacity.catpoint.application.CatpointApp
-                                    </mainClass>
+                                    <mainClass>com.udacity.catpoint.application.CatpointApp</mainClass>
                                 </transformer>
-
                             </transformers>
                         </configuration>
+
                     </execution>
                 </executions>
 
             </plugin>
 
         </plugins>
+
     </build>
 
 </project>
