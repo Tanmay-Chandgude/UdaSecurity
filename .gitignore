@@ -4,13 +4,9 @@
 *.iws
 
 # Maven
-target/
+**/target/
 log/
 dependency-reduced-pom.xml
 
 # Java
 config.properties
-
-# OS
-.DS_Store
-Thumbs.db
