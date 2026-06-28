@@ -1,0 +1,12 @@
+# IntelliJ
+.idea/
+*.iml
+*.iws
+
+# Maven
+target/
+log/
+dependency-reduced-pom.xml
+
+# Java
+config.properties
